@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H2 - U1 - Basic Elements</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #333333;
+      padding: 20px 0;
+    }
+
+    .topbar {
+      width: 960px;
+      display: flex;
+      align-items: end;
+      color: #C0BAB6;
+      justify-content: space-between;
+      padding-bottom: 10px;
+    }
+
+    .logo>h1 {
+      color: white;
+      font-size: 36px;
+      font-weight: normal;
+    }
+
+    .logo>p {
+      font-size: 13px;
+      font-weight: lighter;
+      font-style: italic;
+    }
+
+    .search-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .search-form>label {
+      font-size: 13px;
+    }
+
+    .search-submit {
+      display: flex;
+      gap: 4px;
+    }
+
+    .search-submit>input {
+      border: 1px solid #666666;
+      padding: 4px;
+      background-color: #232323;
+      font-size: 10px;
+      color: white;
+      min-width: 200px;
+    }
+
+    .search-submit>button {
+      border: 0;
+      padding: 4px 16px;
+      background-color: #FF9900;
+    }
+
+    .navbar {
+      background-color: #FF9900;
+      width: 960px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      padding: 18px 0;
+    }
+
+    .navlist {
+      display: flex;
+      list-style: none;
+      gap: 29px;
+      margin-left: 20px;
+    }
+
+    .navlist a {
+      font-size: 13px;
+      color: #333333;
+      text-transform: uppercase;
+    }
+
+    .navlist a:hover {
+      color: white;
+      border-bottom: 2px solid white;
+    }
+
+    main {
+      width: 960px;
+    }
+
+    .main-content {
+      color: #989898;
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+    }
+
+    .main-content>figure {
+      display: flex;
+      background-color: #464646;
+    }
+
+    .main-caption {
+      padding: 20px;
+    }
+
+    .main-caption>h2 {
+      font-size: 42px;
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    .main-caption>p {
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    .continue-link {
+      display: block;
+      color: #FF9900;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+
+    .sub-content {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .article-container {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: #979797;
+      font-weight: lighter;
+      font-style: italic;
+    }
+
+    .article-container>h3 {
+      font-size: 24px;
+      font-weight: normal;
+    }
+
+    .article-container>article {
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 20px;
+    }
+
+    .gallery>img {
+      padding: 4px;
+      border: 1px solid #d6d6d6;
+    }
+
+    footer {
+      width: 100%;
+      background-color: #333333;
+      /* flex: 1; */
+      justify-self: end;
+    }
+
+    .bottom-list {
+      display: flex;
+      justify-content: center;
+      background-color: #333333;
+      color: #C0BAB6;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="topbar">
+      <div class="logo">
+        <h1>Site Logosu</h1>
+        <p>Site Açıklama</p>
+      </div>
+      <form action="#" class="search-form">
+        <label for="search">Arama</label>
+        <div class="search-submit">
+          <input type="text" placeholder="Site içi arama" id="search">
+          <button type="submit">Ara</button>
+        </div>
+      </form>
+    </div>
+    <nav class="navbar">
+      <ul class="navlist">
+        <li>
+          <a href="#">Anasayfa</a>
+        </li>
+        <li>
+          <a href="#">Hakkımda</a>
+        </li>
+        <li>
+          <a href="#">Javascript & Jquery</a>
+        </li>
+        <li>
+          <a href="#">PHP & MySQL</a>
+        </li>
+        <li>
+          <a href="#">İletişim</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="main-content">
+      <figure>
+        <figcaption class="main-caption">
+          <h2>Slogan</h2>
+          <p>Bilgisayarlar öğrenebilen varlıklardır. Fakat öğrenirken algoritmalara gereksinim duyar.</p>
+          <p>Şimdi söz geleceğin kodlayıcılarında: "Algoritma bizim işimiz :)"</p>
+          <a href="#" class="continue-link">Devamını Oku &raquo;</a>
+        </figcaption>
+        <img src="public/630x300.gif" alt="image with 630x300 written on it">
+      </figure>
+    </section>
+    <section class="sub-content">
+      <div class="article-container">
+        <h3>Ad Soyad</h3>
+        <article>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque nisi sit libero. Pariatur quaerat eveniet
+        </article>
+        <article>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia nulla distinctio velit dolorem doloribus,
+          consectetur voluptatem recusandae quis sunt dolorum, sapiente facere nihil ea tenetur? Accusantium sapiente
+          harum reprehenderit nihil.
+        </article>
+      </div>
+      <div class="gallery-container">
+        <div class="gallery">
+          <img src="public/130x130.gif" alt="image with 130x130 written on it">
+          <img src="public/130x130.gif" alt="image with 130x130 written on it">
+          <img src="public/130x130.gif" alt="image with 130x130 written on it">
+        </div>
+        <a href="#" class="continue-link">Resim Galerisi &raquo;</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <ul class="bottom-list">
+      <li>
+        Anasayfa
+      </li>
+      <li>
+        Hakkımda
+      </li>
+      <li>
+        Javascript & Jquery
+      </li>
+      <li>
+        PHP & MySQL
+      </li>
+      <li>
+        İletişim
+      </li>
+    </ul>
+  </footer>
+</body>
+
+</html>
