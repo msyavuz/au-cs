@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Web Programlama Temelleri</title>
+<meta charset="UTF-8">
+
+</head>
+<body>
+
+<style>
+/*----------------------------------------------Genel Ayarlar-------------------------------------*/
+    * { 			/* Web sayfasındaki tüm etiketlerin seçimi */
+		margin:0;	/* Elementlerin kendinden önce ve sonraki elementlerle olan mesafesi 0 pixcel (px) olsun.*/
+        padding:0;  /* Elementlerin kendinden önce ve sonraki elementlerle olan mesafesi 0 px olsun.*/
+		text-decoration:none; /* Elementlerin içerisinde kalan metinlerin altı çizili olmasın.*/
+	}
+	body{			/*body elementinin seçimi*/
+        font-size:13px;  /* Elementin içerisindeki metinlerin yazı büyüklüğü 13 px olsun.*/
+        font-family: Ubuntu;  /* Elementin içerisindeki metinlerin yazı tipi Ubuntu olsun.*/
+        color:#919191;  /* Elementin içerisindeki metinler #919191 koduna karşılık gelen yazı renginde olsun. */
+        background-color:#232323; /* Elementin arka plan rengi #232323 koduna karşılık gelen renkte olsun*/
+        }
+    
+	header, container, footer {  /* header, container, footer elementlerinin seçimi*/
+    	width:960px; /* Elementin Genişliği 960 px olsun.*/
+        margin: 0 auto; /* Elementin sağında ve solunda kalan boşluklar eşit oranda (ortalı) olsun. */
+        }
+	h1, h2, h3, h4, h5, h6{
+		
+		font-size:22px; 
+		font-weight:normal; 
+		font-style:italic; 
+		line-height:normal;}
+	nav ul{
+        list-style:none; /* madde işareti imleri (yuvarlak, kare, sayı) gösterilmesin. */
+        }
+	form, fieldset, legend{
+		border:none;
+	}
+	input, textarea, select{
+    	font-size:12px; 
+    	font-family:Georgia,"Times New Roman",Times,serif;
+    }
+	a {
+    	color:#ffffff; /* Linkler #ffffff koduna karşılık gelen yazı renginde olsun.*/
+    }
+</style>
+<style>
+
+/* ----------------------------------------------Çerçeve-------------------------------------*/
+	.cerceve1 { width:100%; margin:0; padding:0; text-align:left; color:#C0BAB6; background-color:#333333;}
+	.cerceve2 { width:100%; margin:0; padding:0; text-align:left; color:#979797; background-color:#FFFFFF;}
+	.cerceve3 { width:100%; margin:0; padding:0; text-align:left; color:#919191; background-color:#232323;}
+/*----------------------------------------------Header-------------------------------------*/
+	header{padding:20px 0; width:960px;}
+
+	header #logogrup {float:left; margin:0 0 20px 0;}
+	header #logogrup h1, #header #logogrup h2{font-weight:normal; font-style:normal; text-transform:none;}
+	header #logogrup h1{font-size:36px;}
+	header #logogrup h2{font-size:13px;}
+
+	header form{ width:290px; float:right; margin:20px 0; padding:0;}
+	header form input{ float:left; width:200px; margin:0; padding:5px; color:#C0BAB6; background-color:#232323; border:1px solid #666666;}
+	header form #ara{ float:right; width:70px; font-size:12px; font-weight:bold; text-transform:uppercase; color:#FFFFFF; background-color:#FF9900; border:none; cursor:pointer;}
+
+	header nav{ width:100%; margin:0; padding:20px 0; color:#C0BAB6; background-color:#FF9900; clear:both;}
+	header nav ul{padding:0 20px;}
+	header nav li{display:inline; margin-right:25px; text-transform:uppercase;}
+	header nav li.last{margin-right:0;}
+	header nav li a{color:#333333;}
+	header nav li a:hover{color:#ffffff;}
+</style>
+<style>
+
+/*----------------------------------------------Content-------------------------------------*/
+#container{width:960px;
+        margin: 0 auto; /* üst dış boşluğu 0px sağında ve solunda kalan boşluklar eşit oranda (ortalı) olsun. */
+        padding:30px 0; /* üst iç boşluğu 30px diğer iç boşlukları 0px olsun.*/
+		}
+#container section{
+	display:block; /* elementin genişliğini bir üstündeki elementin genişliğine (width=100%) eşitleyelim. */
+	margin-bottom:30px; 
+	padding:0;
+	}
+#container .last{margin:0;}
+#container .more{text-align:right;}
+
+/* ------Slider-----*/
+
+#container #slider{
+	width:100%; /* elementin genişliğini bir üstündeki elementin genişliğine (width=100%) eşitleyelim. */
+	}
+	
+#container #slider figure img{float:right; width:630px; height:300px;}
+
+#container #slider figure figcaption{float:left; width:290px; height:260px; padding:20px; color:#989898; background-color:#464646; 
+	line-height:20px; /* satır tyüksekliğini belirtir. */
+	}
+
+#container #slider figure figcaption a{color:#FF9900; background-color:#464646;}
+#container #slider figure h2{font-size:42px;}
+
+/* ------Intro-----*/
+
+#container #intro{margin-bottom:60px; padding-bottom:20px; }
+#container #intro section .aciklama{width:470px; float:left; margin:0 20px 0 0;}
+#container #intro section .ek {margin-right:0px; }
+#container #intro section article h2 {margin-bottom:15px;}
+#container #intro section article figure ul {list-style:none;}
+#container #intro section article figure ul li {float:left; margin:0 25px 0 0;}
+#container #intro section article figure ul li.last {margin-right:0;}
+#container #intro section article figure ul li img { width:130px; height:130px; padding:4px; 
+	border-width:1px; /* resmin kenarları 1px genişliğinde olsun */
+	border-style:solid; /* resmin kenarları solid (çizgi) stilinde olsun */
+	border-color:#D6D6D6; /* resmin kenarları #D6D6D6 koduna karşılık gelen renkte olsun */
+	
+	}
+#container #intro section article figure figcaption a {color:orange;}
+
+.clear:after{ 		/* class özelliği clear olanan elementten sonra */
+	content:"."; 	/* içeriği . olan bir element yaratalım ve */
+	display:block; 	/* bu elementten sonraki elementin bir alt satırda görüntülenmesini sağlayalım. */
+	}		
+</style>
+<style>
+	.cerceve3 { width:100%; margin:0; padding:0; text-align:left; color:#919191; background-color:#232323;}
+	footer	{padding:20px 0;}
+	footer nav {display:inline-block;}
+	footer nav li {display:inline; padding:4px;border-right:1px solid white}
+		footer nav li:last-child{ /* menünün en son elementini seçer */
+		border:none; 
+		} 
+	footer a{color:white;}
+	footer a:hover{color:orange;}
+</style>
+<!-- Banner -->
+<div class="cerceve1">	
+  <header>
+    <div id="logogrup">
+      <h1><a href="index.html">Site Logosu</a></h1> 
+      <h2>Site Açıklama</h2>
+    </div>
+    <form>
+      <fieldset>
+        <legend>Arama</legend>
+        <input type="text" value="Site içi arama" 
+		onFocus="this.value=(this.value=='Site içi arama')? '' : this.value ;">
+        <input type="submit" id="ara" value="Ara">
+      </fieldset>
+    </form>
+    <nav>
+      <ul>
+			<li><a href="#">Anasayfa</a></li> 
+			<li><a href="#">Hakkımda</a></li> 
+			<li><a href="#">Javascript & Jquery</a></li> 
+			<li><a href="#">PHP & MYSQL</a></li> 
+			<li><a href="#">İletişim</a></li> 
+      </ul>
+    </nav>
+  </header>
+</div>
+<!-- Content -->
+<div class="cerceve2">
+  <div id="container" class="clear">
+    <!-- Slider -->
+    <section id="slider" class="clear">
+      <figure><img src="images/demo/630x300.gif" alt="">
+        <figcaption>
+          <h2>Slogan</h2>
+          <p> Bilgisayarlar öğrenebilen varlıklardır. 
+		  Fakat öğrenirken algoritmalara gereksinim duyar. </p>
+		  <p> Şimdi söz geleceğin kodlayıcılarında: 
+		  "Algoritma bizim işimiz :)"</p>
+          <footer class="devam"><a href="#">Devamını Oku &raquo;</a></footer>
+        </figcaption>
+      </figure>
+    </section>
+    <!-- Aciklama -->
+    <div id="intro">
+      <section class="clear">
+        <!-- article 1 -->
+        <article class="aciklama">
+          <h2>Ad Soyad</h2>
+          <p>Açıklama açıklama açıklama açıklama açıklama açıklama 
+		  açıklama açıklama açıklama açıklama açıklama açıklama 
+		  açıklama açıklama açıklama açıklama açıklama... </a>.</p>
+          <br/>
+		  <p>Açıklama açıklama açıklama açıklama açıklama açıklama 
+		  açıklama açıklama açıklama açıklama açıklama açıklama 
+		  açıklama açıklama açıklama açıklama açıklama... </a>.</p>
+        </article>
+        <!-- article 2 -->
+        <article class="aciklama ek">
+          <figure>
+            <ul class="clear">
+              <li>
+				<a href="#">
+					<img src="images/demo/130x130.gif" width="130" height="130">
+				</a>
+			  </li>
+               <li>
+				<a href="#">
+					<img src="images/demo/130x130.gif" width="130" height="130">
+				</a>
+			  </li>
+			   <li class="last">
+				<a href="#">
+					<img src="images/demo/130x130.gif" width="130" height="130">
+				</a>
+			  </li>
+            </ul>
+            <figcaption><a href="#">Resim Galerisi &raquo;</a></figcaption>
+          </figure>
+        </article>
+      </section>
+	  </div>
+</div>
+</div>
+<!-- Footer -->
+<div class="cerceve3">
+  <footer id="footer">
+	<nav>
+      <ul>
+			<li><a href="#">Anasayfa</a></li> 
+			<li><a href="#">Hakkımda</a></li> 
+			<li><a href="#">Javascript & Jquery</a></li> 
+			<li><a href="#">PHP & MYSQL</a></li> 
+			<li class="son"><a href="#">İletişim</a></li> 
+      </ul>
+    </nav>
+	<p style="float:right">Copyright &copy; 2017 - 
+		<a href="#"> Siteyi Kodlayan kişi İsmi</a>
+	</p>
+  </footer>
+</div>
+</body>
+</html>
+

@@ -51,10 +51,3 @@
 # print(kelime[:2]+kelime[-1])
 # print("_isim".isidentifier(),"2.isim".isidentifier(),"isim3".isidentifier())
 # print(int(input("Bir sayı giriniz: "))*5)
-# import sys
-#
-#
-# sys.getlenf
-
-print("195"*2)
-print(int("195")*2)

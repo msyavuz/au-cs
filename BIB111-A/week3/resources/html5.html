@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+	<title>Web Programlama Temelleri</title> 
+	<!-- Tarayıcı sekmesinde web sayfasının isminin görüntülenmesini sağlar-->
+	<meta charset="UTF-8"> 
+	<!-- Web sayfasının içerisindeki Türkçe karakterlerin görüntülenmesini sağlar -->
+	</head>
+	
+<body>
+	<!-- banner  -->
+	<div>
+	  <header>
+		
+		<div id="hgroup">
+		  <h1><a href="#">Site Logosu</a></h1>
+		  <h2>Site Açıklama</h2>
+		</div>
+		
+		<!-- Site içi arama için bir metin girişi-->
+		<form action="#" method="post">
+		  <fieldset>
+			<legend>Arama</legend>
+			<input type="text" value="Site içi arama">
+			<input type="submit" id="sf_submit" value="Ara">
+		  </fieldset>
+		</form>
+		
+		<nav>
+		  <ul>
+			<li><a href="#">Anasayfa</a></li> 
+			<!-- Şuan tasarlamaya çalıştığımız sitenin anasayfa bağlantısı -->
+			<li><a href="#">Hakkımda</a></li> 
+			<!-- Siteyi kodlayanla ilgili kişisel bilgilerin yer alacağı hakkımızda sayfası -->
+			<li><a href="#">Javascript & Jquery</a></li> 
+			<!-- İlerleyen bölümlerde Javascript ya da Jquery ile yapacağımız kodlamaların yer alacağı site sayfası  -->
+			<li><a href="#">PHP & MYSQL</a></li> 
+			<!-- İlerleyen bölümlerde PHP & MYSQL ile yapacağımız kodlamaların yer alacağı site sayfası  -->
+			<li><a href="#">İletişim</a></li> 
+			<!-- İletişim sayfası -->
+		  </ul>
+		</nav>
+		
+	  </header>
+	</div>
+	
+	<!-- İçerik -->
+	<div>
+	  <!-- Sitenin Slayt Gösterisi ve Ana İçeriğini id' si container olan bir div elementi içerisinde topluyoruz. -->
+	  <div id="container"> 
+	
+		<!-- Sitenin slayt gösterisini id' si slider olan div elementi içerisinde topluyoruz.-->
+		<section id="slider">
+		  <figure><img src="images/demo/630x300.gif" alt=""> <!-- genişliği:630px, yüksekliği:300px bir resim ekliyoruz. -->
+			<figcaption>
+			  <h2>Slogan</h2>
+			  <p> Bilgisayarlar öğrenebilen varlıklardır. Fakat öğretirken algoritmalara gereksinim duyar. </p>
+			  <p> Şimdi söz geleceğin kodlayıcılarında: "Algoritma bizim işimiz :)"</p>
+			  <footer><a href="#">Devamını Oku &raquo;</a></footer>
+			</figcaption>
+		  </figure>
+		</section>
+		
+		<!-- Sitenin Ana İçeriğini id' si intro olan bir div elementi içerisinde topluyoruz. -->
+		<div id="intro">
+		  <section >
+			<!-- article 1 -->
+			<article>
+			  <h2> Biz Kodlayıcılar, </h2>
+			  <p> Web programlama bölümünü bitirdiğimizde örnek bir site tasarlamış olacağız. <br/>
+			  Siteyi tasarlarken hem kodların ne işe yaradığını öğrenecek hem de kodları örnek tasarımımız için uygulayacağız. <br/>
+			  Programlama yapmaktan keyif aldıkça kendi kendinize daha ilgi çekici, beğeni oranı yüksek siteler tasarlayabileceksiniz. </p>
+			</article>
+			<!-- article 2 -->
+			<article>
+			  <figure>
+				<ul>
+				  <li><a href="a1.html"><img src="images/demo/130x130.gif" width="130" height="130" alt=""></a></li>
+				  <!-- Madde işaretli, a1.html sayfasına bağlantılı genişliği:130px, yüksekliği:130px bir resim ekliyoruz.  -->
+				  <li><a href="a2.html"><img src="images/demo/130x130.gif" width="130" height="130" alt=""></a></li>
+				  <!-- Madde işaretli, a2.html sayfasına bağlantılı genişliği:130px, yüksekliği:130px bir resim ekliyoruz.  -->
+				  <li><a href="a3.html"><img src="images/demo/130x130.gif" width="130" height="130" alt=""></a></li>
+				  <!-- Madde işaretli, a3.html sayfasına bağlantılı genişliği:130px, yüksekliği:130px bir resim ekliyoruz.  -->
+				</ul>
+				<figcaption><a href="#">Resim Galerisi &raquo;</a></figcaption> <!-- Buraya dikkat yeni bir kod! -->
+			  </figure>
+			</article>
+		  </section>
+		</div>
+	  
+	  </div>
+	</div>
+	
+	<!-- Footer -->
+	<div>
+		<footer id="footer">
+			<section>
+				<h2>Hızlı Bağlantılar</h2>
+				<nav>
+				  <ul>
+					<li><a href="index.html">Anasayfa</a></li>
+					<li><a href="hakkimda.html">Hakkımda</a></li>
+					<li><a href="jskodlar.html">Javascript & Jquery</a></li>
+					<li><a href="phpmysqlkodlar.php">PHP & MYSQL</a></li>
+					<li><a href="iletisim.php">İletişim</a></li>
+				  </ul>
+				</nav>
+			</section>
+		<p>Copyright &copy; 2017 - <a href="hakkimda.html">Siteyi Kodlayan kişi İsmi</a></p>
+		</footer>
+	</div>
+
+</body>
+
+</html>
+
