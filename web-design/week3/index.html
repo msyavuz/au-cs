@@ -72,6 +72,10 @@
       min-width: 200px;
     }
 
+    .search-submit>input:hover {
+      border: 0;
+    }
+
     .search-submit>button {
       border: 0;
       padding: 4px 16px;
@@ -188,16 +192,64 @@
     footer {
       width: 100%;
       background-color: #333333;
-      /* flex: 1; */
-      justify-self: end;
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .bottom-bar {
+      width: 960px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .bottom-list {
       display: flex;
-      justify-content: center;
-      background-color: #333333;
+      gap: 10px;
       color: #C0BAB6;
       padding: 20px 0;
+      list-style: none;
+      font-size: 13px;
+    }
+
+    .bottom-list>li {
+      padding-right: 8px;
+      border-right: 1px solid white;
+    }
+
+    .bottom-list a {
+      color: white
+    }
+
+    .bottom-list a:hover {
+      color: #FF9900;
+    }
+
+    .bottom-list>li:last-child {
+      border-right: 0;
+    }
+
+    .bottom-list a {}
+
+    .copyright-text {
+      display: flex;
+      align-items: center;
+      color: #C0BAB6;
+      gap: 5px;
+    }
+
+    .copyright-text>p {
+      font-size: 13px;
+    }
+
+    .copyright-text>a {
+      color: #FF9900;
+      font-size: 13px;
+    }
+
+    .copyright-text>a:hover {
+      color: white;
     }
   </style>
 </head>
@@ -274,23 +326,44 @@
   </main>
 
   <footer>
-    <ul class="bottom-list">
-      <li>
-        Anasayfa
-      </li>
-      <li>
-        Hakkımda
-      </li>
-      <li>
-        Javascript & Jquery
-      </li>
-      <li>
-        PHP & MySQL
-      </li>
-      <li>
-        İletişim
-      </li>
-    </ul>
+    <section class="bottom-bar">
+      <ul class="bottom-list">
+        <li>
+          <a href="#">
+            Anasayfa
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Hakkımda
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Javascript & Jquery
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            PHP & MySQL
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            İletişim
+          </a>
+        </li>
+      </ul>
+      <div class="copyright-text">
+        <p>
+          Copyright © 2024
+        </p>
+        -
+        <a href="https://www.msyavuz.dev" target="_blank">
+          Mehmet Salih Yavuz
+        </a>
+      </div>
+    </section>
   </footer>
 </body>
 
