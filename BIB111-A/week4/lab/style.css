@@ -1,0 +1,31 @@
+body {
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+}
+
+#navbar {
+  position: fixed;
+}
+
+nav#navbar a {
+  display: block;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 10px 0;
+  text-decoration: none;
+  color: black;
+}
+
+
+header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+code {
+  background-color: #CCC;
+  display: block;
+  padding: 20px;
+}

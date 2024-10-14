@@ -1,0 +1,60 @@
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+/* padding for whole body */
+body {
+    padding: 15px;
+}
+
+/* styling body */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    color: white;
+}
+
+/* anchor tag decoration */
+a {
+    text-decoration: none;
+    color: #c856b8;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+/* paragraph tag decoration */
+p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+.row {
+    margin: 0px -18px;
+    padding: 8px;
+    clear:both;
+}
+
+.row>.column { /*combinator CSS seçiciler*/
+    padding: 6px;
+}
+.column {
+    float: left;
+    width: 20%;
+    transition: all 0.9s ease; 
+}
+.column:hover {
+    width: 25%;
+    box-shadow: 0 14px 8px rgba(0, 128, 0, 0.5); /* Add box shadow on hover */
+}
+
+
+</style>
