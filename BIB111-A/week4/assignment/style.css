@@ -1,0 +1,47 @@
+body {
+  background-color: #1a1b26;
+  color: #c0caf5;
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+}
+
+#navbar {
+  position: fixed;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav#navbar a {
+  display: block;
+  padding: 5px;
+  margin: 10px 0;
+  text-decoration: none;
+  color: #c0caf5;
+}
+
+nav#navbar a:hover {
+  background-color: #414868;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7aa2f7;
+}
+
+code {
+  background-color: #c0caf5;
+  color: #1a1b26;
+  display: block;
+  padding: 20px;
+}
+
+section section {
+  padding: 4rem;
+}
+
+b {
+  color: #bb9af7;
+}
